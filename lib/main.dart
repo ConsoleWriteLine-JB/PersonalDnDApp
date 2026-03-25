@@ -58,226 +58,438 @@ class CharacterHubScreen extends StatelessWidget { //Stateless means static scre
 
               SizedBox(height: 20,),
 
-              Container(
-                height: 700,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color:  Color(0xFF2A2A2A),
-                  border: Border(
-                    left: BorderSide(
-                      color: Color(0xFFACCFBA),
-                      width: 4.0
-                    )
-                  )
-                ),
-
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              Expanded(
+                child: PageView(
                   children: [
-
-                    //Character Image
-                    Stack(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: ClipRRect(
-                            child: Image.asset(
-                              'assets/quiver.jpg',
-                              height: 350,
-                              width: double.infinity,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: Container(
+                        height: 700,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                          color:  Color(0xFF2A2A2A),
+                          border: Border(
+                            left: BorderSide(
+                              color: Color(0xFFACCFBA),
+                              width: 4.0
+                            )
+                          )
                         ),
 
-                        Positioned(
-                          bottom: 25,
-                          left: 25,
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFFFB77C),
-                            ),
-                            child: const Text(
-                              'Active Unit',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.2,
-                              ),
-                            ),
-                          )
-                        )
-                      ]
-                    ),
-                    
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Quiver',
-                            style: GoogleFonts.cinzel(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
 
-                          SizedBox(height: 4,),
+                            //Character Image
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: ClipRRect(
+                                    child: Image.asset(
+                                      'assets/quiver.jpg',
+                                      height: 350,
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
 
-                          Text(
-                            'Level 11 Gnome Artificer',
-                            style: TextStyle(
-                              color: Color(0xFFACCFBA),
-                              fontSize: 12,
-                              letterSpacing: 1.5,
+                                Positioned(
+                                  bottom: 25,
+                                  left: 25,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFFFB77C),
+                                    ),
+                                    child: const Text(
+                                      'Active Unit',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: 1.2,
+                                      ),
+                                    ),
+                                  )
+                                )
+                              ]
                             ),
-                          ),
-
-                          SizedBox(height: 24),
-
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
+                            
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Strength',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      letterSpacing: 1.2,
-                                      color: Color(0xFF8B928D)
+                                    'Quiver',
+                                    style: GoogleFonts.cinzel(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
 
+                                  SizedBox(height: 4,),
+
                                   Text(
-                                    '8',
-                                    style: GoogleFonts.robotoMono(
-                                      color: Color(0xFFFFB77C),
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold
+                                    'Level 11 Gnome Artificer',
+                                    style: TextStyle(
+                                      color: Color(0xFFACCFBA),
+                                      fontSize: 12,
+                                      letterSpacing: 1.5,
                                     ),
+                                  ),
+
+                                  SizedBox(height: 24),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Strength',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '8',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      Container(
+                                        height: 30,
+                                        width: 1,
+                                        color:  Color(0xFF424242),
+                                      ),
+
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Intelligence',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '20',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      Container(
+                                        height: 30,
+                                        width: 1,
+                                        color:  Color(0xFF424242),
+                                      ),
+
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Dexterity',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '12',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
                                   ),
                                 ],
                               ),
+                            ),
 
-                              Container(
-                                height: 30,
-                                width: 1,
-                                color:  Color(0xFF424242),
-                              ),
-
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Intelligence',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      letterSpacing: 1.2,
-                                      color: Color(0xFF8B928D)
-                                    ),
+                            SizedBox(height: 24),
+                            
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  print('Loading Quiver....');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF4E6E5D),
+                                  minimumSize: Size(200, 50),
+                                  shape: LinearBorder()
+                                ),
+                                child: const Text(
+                                  'RESUME SESSION',
+                                  style: TextStyle(
+                                    color: Color(0xFFCBEFDA),
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2.0,
+                                    )
                                   ),
+                                ),
+                            ),
 
-                                  Text(
-                                    '20',
-                                    style: GoogleFonts.robotoMono(
-                                      color: Color(0xFFFFB77C),
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold
-                                    ),
+                            SizedBox(height: 17,),
+
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  print('Loading Quiver....');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0x004E6E5D),
+                                  minimumSize: Size(200, 50),
+                                  shape:LinearBorder()
+                                ),
+                                child: const Text(
+                                  'VIEW LOGS',
+                                  style: TextStyle(
+                                    color: Color(0xFFC1C8C2),
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2.0,
+                                    )
                                   ),
-                                ],
-                              ),
-
-                              Container(
-                                height: 30,
-                                width: 1,
-                                color:  Color(0xFF424242),
-                              ),
-
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Dexterity',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      letterSpacing: 1.2,
-                                      color: Color(0xFF8B928D)
-                                    ),
-                                  ),
-
-                                  Text(
-                                    '12',
-                                    style: GoogleFonts.robotoMono(
-                                      color: Color(0xFFFFB77C),
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ],
+                                ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
-                    SizedBox(height: 24),
-                    
-                    Center(
-                      child: ElevatedButton(
-                        onPressed: () {
-                          print('Loading Quiver....');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF4E6E5D),
-                          minimumSize: Size(200, 50),
-                          shape: LinearBorder()
-                        ),
-                        child: const Text(
-                          'RESUME SESSION',
-                          style: TextStyle(
-                            color: Color(0xFFCBEFDA),
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 2.0,
+                    //Second Character Card
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8.0),
+                      child: Container(
+                        height: 700,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                          color:  Color(0xFF2A2A2A),
+                          border: Border(
+                            left: BorderSide(
+                              color: Color(0xFFACCFBA),
+                              width: 4.0
                             )
-                          ),
+                          )
                         ),
-                    ),
 
-                    SizedBox(height: 17,),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
 
-                    Center(
-                      child: ElevatedButton(
-                        onPressed: () {
-                          print('Loading Quiver....');
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0x004E6E5D),
-                          minimumSize: Size(200, 50),
-                          shape:LinearBorder()
+                            //Character Image
+                            Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(16.0),
+                                  child: ClipRRect(
+                                    child: Image.asset(
+                                      'assets/goblin.jpg',
+                                      height: 350,
+                                      width: double.infinity,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ]
+                            ),
+                            
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Boblin, The Goblin',
+                                    style: GoogleFonts.cinzel(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+
+                                  SizedBox(height: 4,),
+
+                                  Text(
+                                    'Level 6 Goblin Rogue',
+                                    style: TextStyle(
+                                      color: Color(0xFFACCFBA),
+                                      fontSize: 12,
+                                      letterSpacing: 1.5,
+                                    ),
+                                  ),
+
+                                  SizedBox(height: 24),
+
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Strength',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '14',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      Container(
+                                        height: 30,
+                                        width: 1,
+                                        color:  Color(0xFF424242),
+                                      ),
+
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Intelligence',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '4',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      Container(
+                                        height: 30,
+                                        width: 1,
+                                        color:  Color(0xFF424242),
+                                      ),
+
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Dexterity',
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 1.2,
+                                              color: Color(0xFF8B928D)
+                                            ),
+                                          ),
+
+                                          Text(
+                                            '20',
+                                            style: GoogleFonts.robotoMono(
+                                              color: Color(0xFFFFB77C),
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            SizedBox(height: 24),
+                            
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  print('Loading Quiver....');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF4E6E5D),
+                                  minimumSize: Size(200, 50),
+                                  shape: LinearBorder()
+                                ),
+                                child: const Text(
+                                  'RESUME SESSION',
+                                  style: TextStyle(
+                                    color: Color(0xFFCBEFDA),
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2.0,
+                                    )
+                                  ),
+                                ),
+                            ),
+
+                            SizedBox(height: 17,),
+
+                            Center(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  print('Loading Quiver....');
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0x004E6E5D),
+                                  minimumSize: Size(200, 50),
+                                  shape:LinearBorder()
+                                ),
+                                child: const Text(
+                                  'VIEW LOGS',
+                                  style: TextStyle(
+                                    color: Color(0xFFC1C8C2),
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2.0,
+                                    )
+                                  ),
+                                ),
+                            ),
+                          ],
                         ),
-                        child: const Text(
-                          'VIEW LOGS',
-                          style: TextStyle(
-                            color: Color(0xFFC1C8C2),
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 2.0,
-                            )
-                          ),
-                        ),
-                    ),
+                      )
+                    )
                   ],
                 ),
-              )
+              ),
             ],
-          ),
+        ),
         ),
       ),
     );
