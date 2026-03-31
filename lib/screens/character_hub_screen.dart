@@ -14,7 +14,6 @@ class _CharacterHubScreenState extends State<CharacterHubScreen> {
   int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    // Scaffold is the blank canvas for a single screen
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed:() {

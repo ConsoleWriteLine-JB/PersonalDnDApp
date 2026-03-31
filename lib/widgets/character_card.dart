@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:yes/screens/character_session_screen.dart';
 
 class CharacterCard extends StatelessWidget {
   final String name;
@@ -198,7 +199,12 @@ class CharacterCard extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  print('Loading Quiver....');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CharacterSessionScreen(), 
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF4E6E5D),
