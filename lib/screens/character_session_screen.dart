@@ -11,7 +11,7 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF090909),
+      backgroundColor: const Color(0xFF131313),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
