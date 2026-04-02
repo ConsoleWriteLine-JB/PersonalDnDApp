@@ -102,7 +102,7 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
                   height: 120,
                   width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Color(0xFF161616),
+                        color: Color(0xFF1C1B1B),
                       ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
@@ -383,6 +383,49 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
                   )
                 ),
 
+                /*Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0XFF1C1B1B),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Color(0XFF20201F),
+                              ),
+                              child: Text(
+                                "Strength",
+                                style: TextStyle(
+                                  color: Color(0xFFACCFBA),
+                                ),
+                              ),
+                            ),
+
+                            Container(
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "Athletics",
+                                    style: TextStyle(
+                                      color: Colors.grey
+                                    ),
+                                  ),
+                                ]
+                              )
+                            )
+                          ]
+                        ),
+                      )
+                    ],
+                  )
+                ), */
                 //Hierso
 
               ],
@@ -398,7 +441,7 @@ Widget _darkCard (String title, String value, {Color valueColor = Colors.white})
   return Container(
     padding: const EdgeInsets.symmetric(vertical: 24),
     decoration: BoxDecoration(
-      color: const Color(0xFF161616),
+      color: const Color(0xFF1C1B1B),
       borderRadius: BorderRadius.circular(4)
     ),
     child: Column(
@@ -412,6 +455,126 @@ Widget _darkCard (String title, String value, {Color valueColor = Colors.white})
             value,
             style: TextStyle(color: valueColor, fontSize: 40, fontWeight: FontWeight.w900, height: 1.0),
         ),
+      ]
+    )
+  );
+}
+
+Widget _buildAbilityBlock ({
+  required String title,
+  required String score,
+  required String modifier,
+  required List<Widget> skills,
+}) {
+  return Container(
+    width: double.infinity,
+    margin: const EdgeInsets.only(bottom: 16),
+    decoration: BoxDecoration(
+      color: Color(0xFF161616),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Color(0xFF1E1E1E),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                title.toUpperCase(),
+                style: TextStyle(
+                  color: Color(0xFFACCFBA), 
+                  fontSize: 14, 
+                  fontWeight: FontWeight.bold, 
+                  letterSpacing: 1.5,
+                )
+              ),
+
+              Row(
+                children: [
+                  Text(
+                    score,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w900, 
+                    ),
+                  ),
+
+                  SizedBox(width: 5,),
+
+                  Container(
+                    padding: EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: Color(0XFFA95C00),
+                    ),
+                    child: Text(
+                      modifier,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  )
+                ]
+              ),
+            ],
+          ),
+        ),
+
+        Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            children: skills,
+          )
+        )
+      ],
+    ),
+  );
+}
+
+Widget _buildSkillRow (String skillname, String modifier, {bool isProficient = false}) {
+  return Padding(
+    padding: EdgeInsets.only(bottom: 8),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Container(
+              width: 6,
+              height: 6,
+              decoration: BoxDecoration(
+                color: isProficient? Color(0xFFFFB77C) : Color(0xFF424242),
+              )
+            ),
+
+            SizedBox(width: 12),
+
+            Text(
+              skillname.toUpperCase(),
+              style: TextStyle(
+                color: isProficient? Colors.white : Colors.grey,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1
+              ),
+            ),
+          ]
+        ),
+
+        Text(
+          modifier,
+          style: TextStyle(
+            color: isProficient? Colors.white : Colors.grey,
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+          )
+          
+        )
       ]
     )
   );
