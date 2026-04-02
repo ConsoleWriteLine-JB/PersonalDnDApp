@@ -383,49 +383,72 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
                   )
                 ),
 
-                /*Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Color(0XFF1C1B1B),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: Color(0XFF20201F),
-                              ),
-                              child: Text(
-                                "Strength",
-                                style: TextStyle(
-                                  color: Color(0xFFACCFBA),
-                                ),
-                              ),
-                            ),
+                SizedBox(height: 10,),
 
-                            Container(
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "Athletics",
-                                    style: TextStyle(
-                                      color: Colors.grey
-                                    ),
-                                  ),
-                                ]
-                              )
-                            )
-                          ]
-                        ),
-                      )
-                    ],
-                  )
-                ), */
+                _buildAbilityBlock(
+                  title: "Strength",
+                  score: "12",
+                  modifier: "+1",
+                  skills: [
+                    _buildSkillRow("Athletics", "+5", isProficient: true)
+                  ]
+                ),
+
+                _buildAbilityBlock(
+                  title: "Dexterity",
+                  score: "14",
+                  modifier: "+2",
+                  skills: [
+                    _buildSkillRow("Acrobatics", "+2", isProficient: false),
+                    _buildSkillRow("Sleight of Hand", "+2", isProficient: false),
+                    _buildSkillRow("Stealth", "+2", isProficient: false),
+                  ]
+                ),
+
+                 _buildAbilityBlock(
+                  title: "Constitution",
+                  score: "18",
+                  modifier: "+4",
+                  skills: []
+                ),
+
+                 _buildAbilityBlock(
+                  title: "Intelligence",
+                  score: "20",
+                  modifier: "+5",
+                  skills: [
+                    _buildSkillRow("Arcana", "+9", isProficient: true),
+                    _buildSkillRow("History", "+5", isProficient: false),
+                    _buildSkillRow("Investigation", "+9", isProficient: true),
+                    _buildSkillRow("Nature", "+5", isProficient: false),
+                    _buildSkillRow("Religion", "+5", isProficient: false),
+                  ]
+                ),
+
+                 _buildAbilityBlock(
+                  title: "Wisdom",
+                  score: "16",
+                  modifier: "+3",
+                  skills: [
+                    _buildSkillRow("Animal Handling", "+3", isProficient: false),
+                    _buildSkillRow("Insight", "+3", isProficient: false),
+                    _buildSkillRow("Medicine", "+3", isProficient: false),
+                    _buildSkillRow("Perception", "+7", isProficient: true),
+                    _buildSkillRow("Survival", "+3", isProficient: false),
+                  ]
+                ),
+
+                 _buildAbilityBlock(
+                  title: "Charisma",
+                  score: "8",
+                  modifier: "-1",
+                  skills: [
+                    _buildSkillRow("Deception", "-1", isProficient: false),
+                    _buildSkillRow("Intimidation", "-1", isProficient: false),
+                    _buildSkillRow("Performance", "-1", isProficient: false),
+                    _buildSkillRow("Persuasion", "-1", isProficient: false),
+                  ]
+                ),
                 //Hierso
 
               ],
@@ -504,7 +527,7 @@ Widget _buildAbilityBlock ({
                     ),
                   ),
 
-                  SizedBox(width: 5,),
+                  SizedBox(width: 14,),
 
                   Container(
                     padding: EdgeInsets.all(6),
@@ -548,7 +571,7 @@ Widget _buildSkillRow (String skillname, String modifier, {bool isProficient = f
               width: 6,
               height: 6,
               decoration: BoxDecoration(
-                color: isProficient? Color(0xFFFFB77C) : Color(0xFF424242),
+                color: isProficient? Color.fromARGB(255, 255, 130, 28) : Color(0xFF424242),
               )
             ),
 
@@ -557,8 +580,8 @@ Widget _buildSkillRow (String skillname, String modifier, {bool isProficient = f
             Text(
               skillname.toUpperCase(),
               style: TextStyle(
-                color: isProficient? Colors.white : Colors.grey,
-                fontSize: 10,
+                color: Colors.white,
+                fontSize: 11,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1
               ),
@@ -569,11 +592,10 @@ Widget _buildSkillRow (String skillname, String modifier, {bool isProficient = f
         Text(
           modifier,
           style: TextStyle(
-            color: isProficient? Colors.white : Colors.grey,
+            color: isProficient? Color.fromARGB(255, 255, 130, 28) : Colors.grey,
             fontSize: 12,
             fontWeight: FontWeight.bold,
           )
-          
         )
       ]
     )
