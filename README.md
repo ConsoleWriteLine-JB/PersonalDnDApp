@@ -1,6 +1,6 @@
-# yes
+# QuiverWorks
 
-A new Flutter project.
+A D&D Character Management App, focussing on homebrew and a faster load time than what D&DBeyond currently has. It also focusses on simplification to allow newer people to get into D&D's complex systems
 
 ## Getting Started
 
