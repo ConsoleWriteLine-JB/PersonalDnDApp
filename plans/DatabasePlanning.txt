@@ -1,0 +1,160 @@
+Multiple Characters
+
+Character:
+PK: ChaID
+1. Attribute Scores (STR, DEX, CON, INT, WIS, CHA)
+2. XP
+3. MaxHP
+4. CurrentHP
+5. TempHP
+FK: RacID
+FK: BacID
+
+CharacterClasses:
+FK: ClaID
+FK: SubClaID (optional) 
+1. Level
+
+CharacterSelections:
+FK: ChaID
+1. Type
+2. SelectionType
+3. Value
+
+CharacterProficiencies:
+FK: ChaID
+1. Target
+2. Source
+3. Expertise (bool)
+
+CharacterNotes:
+FK: ChaID
+1. Title
+2. Content
+3. Timestamp
+
+Skills:
+PK: SkiID
+1. Skillname
+2. AttributeType
+
+ItemLibrary:
+PK: ItemID
+1. ItemName
+2. Description
+3. Category
+4. Type (weapons: finesse, armour: medium)
+5. Weight
+6. IsMagical (bool)
+7. RequiresAttunement
+8. Properties
+9. BaseValue
+10. ACBase (optional for armour)
+11. DexCap (optional for armour)
+12. Uses (Optional If there is a special feature)
+13. ResetType (Optional)
+
+Inventory:
+FK: ChaID
+FK: ItemID
+1. Quantity
+2. IsEquipped (bool)
+3. CurrentUses (Optional)
+
+Class:
+PK: ClaID
+1. Class Name (e.g. Ranger)
+2. HitDie
+
+ClassRequirements:
+PK: AutoGen
+1. StatType
+2. MinimumValue
+FK: ClaID
+
+Subclass:
+PK: SubClaID
+1. Subclass Name
+2. Subclass Description
+
+Features:
+PK: FeaID
+FK: ClaID (Optional)
+FK: SubClaID (Optional)
+FK: RacID (Optional)
+FK: BacID (Optional)
+1. Feature Name
+2. Feature Description
+3. Uses (optional)
+4. ResetType (optional)
+6. Level Required
+7. ActionType (optional)
+
+ResourcePool:
+FK: ChaID
+1. ResourceName
+2. MaxAmount
+3. CurrentAmount
+
+CharacterSpell:
+FK: ChaID
+FK: SpellID
+1. IsPrepared (bool)
+
+Spell:
+PK: SpellID
+1. SpellName
+2. SpellDescription
+3. SpellLevel
+4. SpellRange
+5. SpellComponents
+6. SpellDamage (optional for utility spells)
+7. SpellSaveAttribute (optional as not all spells have saves)
+8. ActionType
+FK: ClaID (As classes can have their own unique spells)
+
+SpellSlots:
+FK: ClaID
+1. ClassLevel
+2. SS1
+3. SS2
+4. SS3
+5. SS4
+6. SS5
+7. SS6
+8. SS7
+9. SS8
+10. SS9
+11. KnownSpells
+12. Cantrips
+
+Race:
+PK: RacID
+1. Race Name
+3. Race Features
+4. Base Movement
+
+RaceAttributeBonus:
+PK: RAttrID
+1. Attribute
+2. Bonus
+FK: RacID
+
+Background:
+PK: BacID
+1. Background Name
+
+BackgroundAttributeBonus:
+PK: BAttrID
+1. Attribute
+2. Bonus
+FK: BacID
+
+ProficiencyGrant:
+PK: GrantID
+FK: RacID
+FK: BacID
+FK: ClaID
+1. Type
+2. Target
+3. IsChoice
