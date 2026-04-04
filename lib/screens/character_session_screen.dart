@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yes/screens/tabs/character_spellbook.dart';
 import 'package:yes/screens/tabs/character_stats.dart'; 
 import 'package:yes/screens/tabs/character_combat.dart';
 
@@ -26,7 +27,7 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
       // We call our newly created Lego brick!
       const StatTab(), 
       const CombatTab(),
-      const Center(child: Text("SPELL BOOK", style: TextStyle(color: Colors.white, fontSize: 24))),
+      const SpellTab(),
       const Center(child: Text("INVENTORY", style: TextStyle(color: Colors.white, fontSize: 24))),
       const Center(child: Text("FEATURES", style: TextStyle(color: Colors.white, fontSize: 24))),
     ];
