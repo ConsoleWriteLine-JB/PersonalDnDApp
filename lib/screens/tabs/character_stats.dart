@@ -187,6 +187,8 @@ class StatTab extends StatelessWidget {
                     _buildSkillRow("Persuasion", "-1", isProficient: false),
                   ]
                 ),
+
+                SizedBox(height: 15,)
             ],
           ),
         ),

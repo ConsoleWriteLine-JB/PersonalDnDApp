@@ -53,6 +53,16 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.stars), label: 'Features'),
         ],
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed:() {
+          print('Opening Notes');
+        },
+        backgroundColor: const Color(0xFFFFB77C),
+        icon: const Icon(Icons.note_add, color: Colors.black),
+        label: const Text('Notes', style: TextStyle(
+          color: Colors.black, fontWeight: FontWeight.bold
+        ))
+      ),
     );
   }
 }
