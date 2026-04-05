@@ -54,7 +54,7 @@ class CombatTab extends StatelessWidget{
                         RichText(
                           text: const TextSpan(
                             children: [
-                              TextSpan(text: "63", style: TextStyle(color: Color(0xFFACCFBA), fontSize: 24, fontWeight: FontWeight.bold)),
+                              TextSpan(text: "62", style: TextStyle(color: Color(0xFFACCFBA), fontSize: 24, fontWeight: FontWeight.bold)),
                               TextSpan(text: " / 84", style: TextStyle(color: Colors.grey, fontSize: 16)),
                             ]
                           )
