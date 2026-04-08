@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yes/screens/tabs/character_features.dart';
+import 'package:yes/screens/tabs/character_inventory.dart';
 import 'package:yes/screens/tabs/character_spellbook.dart';
 import 'package:yes/screens/tabs/character_stats.dart'; 
 import 'package:yes/screens/tabs/character_combat.dart';
@@ -28,8 +30,8 @@ class _CharacterSessionScreenState extends State<CharacterSessionScreen> {
       const StatTab(), 
       const CombatTab(),
       const SpellTab(),
-      const Center(child: Text("INVENTORY", style: TextStyle(color: Colors.white, fontSize: 24))),
-      const Center(child: Text("FEATURES", style: TextStyle(color: Colors.white, fontSize: 24))),
+      const InventoryTab(),
+      const FeaturesTab(),
     ];
 
     return Scaffold(

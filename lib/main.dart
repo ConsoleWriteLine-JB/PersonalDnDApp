@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/character_hub_screen.dart';
 
-
-
 void main() {
   runApp(const ArtificerApp());
 }
