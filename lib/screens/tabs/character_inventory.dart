@@ -50,7 +50,7 @@ class InventoryTab extends StatelessWidget{
                   columnWidths: const {
                     0: FlexColumnWidth(3),
                     1: FlexColumnWidth(1),
-                    2: FlexColumnWidth(1),
+                    2: FlexColumnWidth(2),
                   },
                   children: [
                     TableRow(
@@ -99,14 +99,13 @@ TableRow _buildItemRow(String name, String qty, String weight) {
         child: Text(name, style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),),
       ),
       Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          padding: const EdgeInsets.symmetric(vertical: 16),
           child: Text(qty, style: const TextStyle(color: Color(0xFFFFB77C), fontSize: 14, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
-        ),
-        // Weight
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0),
-          child: Text(weight, style: const TextStyle(color: Colors.grey, fontSize: 14), textAlign: TextAlign.right),
-        )
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Text(weight, style: const TextStyle(color: Colors.grey, fontSize: 14), textAlign: TextAlign.right),
+      )
     ]
   );
 }
