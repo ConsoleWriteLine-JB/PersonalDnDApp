@@ -275,6 +275,7 @@ Widget _buildActions ({required String actionName, required String actionDescrip
   return Container(
     decoration: BoxDecoration(
       color: Color(0xFF1A1A1A),
+      border: BoxBorder.all(color: Color.fromARGB(255, 41, 41, 41))
     ),
     child: Padding(
       padding: EdgeInsets.all(8),
