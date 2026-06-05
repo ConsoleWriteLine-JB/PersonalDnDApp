@@ -42,7 +42,7 @@ class FeaturesTab extends StatelessWidget{
 
               racialTrait('Gnome Cunning', 'You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.'),
 
-              classFeature('skoef', 'skoef elke dag +2 intelligence')
+              classFeature('Magical Tinkering', 'At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have thieves’ tools or artisan’s tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice')
             ],
           ),
         ),

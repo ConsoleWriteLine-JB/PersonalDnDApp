@@ -41,4 +41,12 @@ final List<Character> myRoster = [
     intelligence: 20,
     dexterity: 20,
   ),
+  Character(
+    name: 'Piet',
+    subtitle: 'Level 15 Human Wizard',
+    imagePath: 'assets/piet.jpeg', 
+    strength: 15,
+    intelligence: 20,
+    dexterity: 12,
+  ),
 ];
