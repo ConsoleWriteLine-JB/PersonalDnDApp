@@ -86,15 +86,15 @@ graph TD
 Milestone 1: Core Domain Models & Rules (Pure Dart)
 - [x] Ability scores, modifiers, and point buy validation
 - [x] Proficiencies, skills, and proficiency bonus scaling
-- [] Character classes, hit dice, and level progression
-- [] Encumbrance, inventory, and currency conversion
-- [] Milestone 2: State Management & Persistence (Pure Dart)
-- [] Character aggregate root and immutable state updates
-- [] JSON serialization/deserialization with schema validation
+- [ ] Character classes, hit dice, and level progression
+- [ ] Encumbrance, inventory, and currency conversion
+- [ ] Milestone 2: State Management & Persistence (Pure Dart)
+- [ ] Character aggregate root and immutable state updates
+- [ ] JSON serialization/deserialization with schema validation
 Milestone 3: Presentation Layer (Flutter)
-- [] UI widgets, state wiring, and responsive character sheets
+- [ ] UI widgets, state wiring, and responsive character sheets
 Milestone 4: Backend & Sync (Dart Server / Shelf / Serverpod)
-- [] REST/gRPC API and cloud persistence
+- [ ] REST/gRPC API and cloud persistence
 
 ## 🔒 License & Notice
 
